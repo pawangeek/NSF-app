@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/style.css') }}" />
+    <head>
+        <title>Neural Style Transfer</title>
+    </head>
+    <body>
+        <div class="container">
+            <p> Creating art With Deep Learning</p>
+            <div class="upload">
+                <form method="POST" action="{{ url_for('upload') }}">
+                    <p class="message"> Upload content image</p>
+                    <input type="file" name="content">
+                    <p class="message"> Upload Style image </p>
+                    <input type="file" name="Style "
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
