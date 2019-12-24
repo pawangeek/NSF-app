@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/style.css') }}" />
+    <head>
+        <title>Displaying the image</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p class="message">Content uploaded sucessfully
+                <br>
+                Filename: {{content}}
+            </p>
+            
+            <div class="image-container">
+                <img class="normal-image" src="{{ url_for('serve_image', filename=content)}}">
+            </div><br>
+
+            <p class="message">Style uploaded successfully
+                <br>
+                Filename: {{style}}
+            </p>
+
+            <div class="image-container">
+                <img class="normal-image" src="{{ url_for('serve_image', filename=style)}}">
+            </div><br>
+
+            <form method="POST" action="{{ url_for('style_transfer')}}" enctype="multipart/form-data">
+                <input type="submit" value="Run style Transfer">
+            </form>
+
+        </div>
+
+    </body>
+
+</html>

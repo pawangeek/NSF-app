@@ -8,7 +8,7 @@
         <div class="container">
             <p> Creating art With Deep Learning</p>
             <div class="upload">
-                <form method="POST" action="{{ url_for('upload') }}">
+                <form method="POST" action="{{ url_for('upload') }}", enctype="multipart/form-data">
                     <p class="message"> Upload content image</p>
                     <input type="file" name="content">
                     <p class="message"> Upload Style image </p>
