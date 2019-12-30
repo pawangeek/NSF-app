@@ -59,8 +59,6 @@ def style_transfer():
         print(f'Output Filename: {output_filename}')
         return render_template('model.html', output_image=output_filename)
 
-app.debug = True
-
 if __name__ == '__main__':
-    server = Server(app.wsgi_app)
-    server.serve()
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.run(debug=True)

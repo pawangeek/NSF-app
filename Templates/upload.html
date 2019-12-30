@@ -3,15 +3,13 @@
 <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/style.css') }}" />
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Displaying Uploaded Images</title>
 </head>
 
 <body>
+    <div class="wrapper">
     <div class='container'>
-        <p class='message'>
+        <p class='message2'>
             Content Image Uploaded Successfully
             <br />
             Filename: {{content}}
@@ -20,7 +18,7 @@
             <img class='normal-image' src="{{ url_for('serve_image', filename=content)}}">
         </div>
         <br /><br />
-        <p class="message">
+        <p class="message2">
             Style Image Uploaded Successfully
             <br />
             Filename: {{style}}
@@ -31,6 +29,14 @@
         <form method="POST" action="{{ url_for('style_transfer') }}" enctype=multipart/form-data> <input type="submit"
             value="Run Style Transfer">
         </form>
+        </div>
+        <div class="footer">
+            <div class="container1">
+                <strong> &copy; Pawan Kumar Jain</strong>
+            </div>
+        </div>
+        </div>
+    </div>
     </div>
 </body>
 

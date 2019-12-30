@@ -3,28 +3,33 @@
 <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/style.css') }}" />
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome to Neural Style Transfer</title>
 </head>
 
 <body>
+    <div class="wrapper">
     <div class='container'>
         <p class='message'>
             Neural Style Transfer: Creating art with Deep Learning
         </p>
+        <img class="nsfimg" src="{{ url_for('static', filename='img/nsf.png') }}" alt="">
         <div class='upload-pane'>
-            <form method="POST" action="{{ url_for('upload') }}" enctype=multipart/form-data> <p class="message">Upload
-                Content Image</p>
+            <form method="POST" action="{{ url_for('upload') }}" enctype=multipart/form-data>
+                <p class="message2"> Upload Content Image </p>
                 <input type="file" name="content">
-                <p class="message">Upload Style Image</p>
+                <p class="message2"> Upload Style Image </p>
                 <input type="file" name="style">
                 <br />
                 <input type="submit" value="Upload">
             </form>
         </div>
     </div>
-</body>
+        <div class="footer">
+            <div class="container1">
+                <strong> &copy; Pawan Kumar Jain</strong>
+            </div>
+        </div>
+    </div>
 
+</body>
 </html>
